@@ -1,0 +1,24 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        int num = obj.nextInt();
+        int sum = 0;
+        int n1 = num;
+        while (num != 0) {
+            int n = num % 10;
+            sum += n;
+            num /= 10;
+        }
+        int r=sum;
+        int rev = 0;
+        while (sum != 0) {
+            rev = (rev * 10) + sum % 10;
+            sum /= 10;
+        }
+        if (r*rev == n1)
+            System.out.print("YES");
+        else
+            System.out.print("NO");
+    }
+}
