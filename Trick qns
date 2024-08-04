@@ -1,0 +1,137 @@
+1)  
+import java.util.*;
+public class test {
+    public static void main(String[] args) 
+    {
+        int value = 3,sum=6+--value;
+        int data = --value+ ++value/sum++ * value++ + ++sum%value--;
+        System.out.print(data);
+    }
+}
+
+OUTPUT: 
+2
+--------------------------------------------------------------------------------------------
+2)
+import java.util.*;
+
+class Base {
+    protected void foo() {
+        System.out.println("Base");
+    }
+}
+
+class Derived extends Base {
+    void foo() {
+        System.out.println("Derived");
+    }
+}
+
+public class Main {
+    public static void main(String args[]) {
+        Derived d = new Derived();
+        d.foo();
+    }
+}
+
+OUTPUT:
+Derived
+----------------------------------------------------------------------------------------
+3)
+import java.util.*;
+class Test {
+    int a=10;
+    static int b=20;
+    public static void main(String args[]) {
+        Test t1 = new Test();
+        t1.a=100;
+        t1.b=200;
+        Test t2 = new Test();
+        System.out.println("t1.a="+t1.a+"t1.b="+t1.b);
+        System.out.println("t2.a="+t2.a+"t2.b="+t2.b);
+    }
+}
+OUTPUT:
+t1.a=100t1.b=200
+t2.a=10t2.b=200
+-------------------------------------------------------------------------------------------
+4)
+import java.util.*;
+
+interface I1 {
+    String toString();
+}
+
+class Main {
+    public static void main(String args[]) {
+        System.out.println(new I1() {
+            @Override
+            public String toString() {
+                System.out.print("Example");
+                return "A";
+            }
+        });
+    }
+}
+OUTPUT:
+ExampleA
+------------------------------------------------------------------------------------------------
+5)
+import java.util.*;
+class Test {
+    public static void main(String args[])
+    {
+        try {
+            int x = 5 / 0;
+        }
+        catch (Exception e) {
+            System.out.print("Exception");
+        }
+        catch (ArithmeticException e) {
+            System.out.print("Arithmetic Exception");
+        }
+        System.out.println("Last line");
+    }
+}
+OUTPUT:
+Compilation Error
+//Due to the ordering of the catch blocks, the Java compiler will generate an error
+It displays
+Error: exception ArithmeticException has already been caught
+--------------------------------------------------------------------------------------------------------
+6)
+import java.util.*;
+public class MySubject {
+    private static enum Subject {PHYSICS, MATHS, CHEMISTRY;}
+    
+    public static void printPhysics() {
+        System.out.println("MATHS");
+    }
+    
+    public static void printMaths() {
+        System.out.println("CHEMISTRY");
+    }
+    
+    public static void printChemistry() {
+        System.out.println("PHYSICS");
+    }
+    
+    public static void main(String args[]) {
+        Subject subject = Subject.PHYSICS;
+        switch(subject) {
+            case PHYSICS:
+                printPhysics();
+            case MATHS:
+                printMaths();
+            case CHEMISTRY:
+                printChemistry();
+                break;
+        }
+    }
+}
+OUTPUT:
+MATHS
+CHEMISTRY
+PHYSICS
+-------------------------------------------------------------------------------------------------------
+
