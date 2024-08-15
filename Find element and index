@@ -1,0 +1,29 @@
+import java.util.*;
+import java.util.ArrayList;
+class main
+{
+
+    public static void main(String[]args)
+    {
+        Scanner scanner = new Scanner(System.in);
+        ArrayList <Integer> list = new ArrayList<>();
+        list.add(5);
+        list.add(7);
+        list.add(2);
+        list.add(3);
+        list.add(1);
+        int key=87654;
+        int flag = 0;
+        for(int i=0;i<list.size();i++){
+                if(list.get(i)==key)
+                {
+                    System.out.print("Element found");
+                    System.out.printf("\nIndex %d",i);
+                    flag =1 ;
+                    break;
+                }
+            }
+        if(flag==0)
+            System.out.println("Element not found");
+    }
+}
