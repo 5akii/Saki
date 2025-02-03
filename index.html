@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netflix Clone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="header">
+    <nav class="navbar">
+      <img src="assets/images/logo.png" alt="Netflix Logo" class="logo">
+      
+      <select id="lang">
+        <option value="en">English</option>
+        <option value="es">Español (Spanish)</option>
+        <option value="fr">Français (French)</option>
+        <option value="de">Deutsch (German)</option>
+        <option value="zh">中文 (Chinese)</option>
+        <option value="hi">हिन्दी (Hindi)</option>
+        <option value="ar">العربية (Arabic)</option>
+        <option value="ru">Русский (Russian)</option>
+        <option value="ja">日本語 (Japanese)</option>
+        <option value="ko">한국어 (Korean)</option>
+        <option value="it">Italiano (Italian)</option>
+        <option value="pt">Português (Portuguese)</option>
+        <option value="tr">Türkçe (Turkish)</option>
+        <option value="nl">Nederlands (Dutch)</option>
+        <option value="sv">Svenska (Swedish)</option>
+        <option value="pl">Polski (Polish)</option>
+        <option value="ta">தமிழ் (Tamil)</option>
+        <option value="bn">বাংলা (Bengali)</option>
+        <option value="vi">Tiếng Việt (Vietnamese)</option>
+        <option value="th">ไทย (Thai)</option>
+        <option value="he">עברית (Hebrew)</option>
+        <option value="fa">فارسی (Persian)</option>
+        <option value="ur">اردو (Urdu)</option>
+        <option value="el">Ελληνικά (Greek)</option>
+        <option value="cs">Čeština (Czech)</option>
+        <option value="ro">Română (Romanian)</option>
+        <option value="hu">Magyar (Hungarian)</option>
+        <option value="fi">Suomi (Finnish)</option>
+        <option value="id">Bahasa Indonesia (Indonesian)</option>
+        <option value="no">Norsk (Norwegian)</option>
+    </select>
+  
+  <style>
+    select {
+      width: 200px;
+      padding: 8px;
+      font-size: 16px;
+      border: 1.5px solid #ffffff;
+      border-radius: 5px;
+      background-color: rgba(255, 255, 255, 0);
+      color: #ffffff;
+      cursor: pointer;
+    }
+  
+    select option {
+      background-color: rgb(6, 6, 6);
+      color: rgb(255, 255, 255);
+      font-size: 14px;
+    }
+  
+    select:hover {
+      border-color: #ffffff;
+    }
+    select {
+  position: absolute;
+  top: 5%;
+  left: 55%;
+  transform: translate(100%, 5%);
+}
+
+  </style>
+      <button class ="sign-in" onclick="window.location.href='page1.html'">Sign In</button>
+    </nav>
+    <div class="hero">
+      <h1>Unlimited movies, TV shows, and more.</h1>
+      <p>Watch anywhere. Cancel anytime.</p>
+      <form class="email-form">
+        <input type="email" placeholder="Email address" required>
+        <button type="submit">Get Started ></button>
+      </form>
+    </div>
+  </header>
+
+  <!-- Movie Sections -->
+  <section class="movie-section">
+    <h2>Trending Now</h2>
+    <centre>
+    <div class="movie-list">
+      <div class="movie-item">
+        <img src="assets/images/movie1.jpg" alt="Movie 1">
+      </div>
+      <div class="movie-item">
+        <img src="assets/images/movie2.jpg" alt="Movie 2">
+      </div>
+      <div class="movie-item">
+        <img src="assets/images/movie3.jpg" alt="Movie 3">
+      </div>
+      <div class="movie-item">
+        <img src="assets/images/movie4.jpg" alt="Movie 4">
+      </div>
+      <div class="movie-item">
+        <img src="assets/images/movie5.jpg" alt="Movie 5">
+      </div>
+    </div>
+  </centre>
+  </section>
+
+
+  <div class="hh">
+    <h2>More reasons to join</h2>
+    </div>
+
+    
+  <!-- Reason Section -->
+  <section class="reason-section">
+    <div class="reason-list">
+      <div class="reason-item">
+        <img src="assets/images/reason1.png" alt="Reason 1">
+      </div>
+      <div class="movie-item">
+        <img src="assets/images/reason2.png" alt="Reason 2">
+      </div>
+      <div class="movie-item">
+        <img src="assets/images/reason3.png" alt="Reason 3">
+      </div>
+      <div class="movie-item">
+        <img src="assets/images/reason4.png" alt="Reason 4">
+      </div>
+    </div>
+  </section>
+
+  <!-- Low -->
+  <section class="low">
+    <div class="zz">
+      <p1> Ready to watch? Enter your email to create or restart the membership.</p1>
+      <form class="email-form2">
+        <input type="email" placeholder="Email address" required>
+        <button type="submit">Get Started ></button>
+      </form>
+  </div>
+    <p>Questions? Call 1-844-505-2993</p>
+    <ul>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Help Center</a></li>
+      <li><a href="#">Terms of Use</a></li>
+      <li><a href="#">Privacy</a></li>
+    </ul>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
